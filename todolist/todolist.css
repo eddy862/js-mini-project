@@ -1,0 +1,212 @@
+* {
+  font-family: Arial;
+  margin: 0;
+}
+body {
+  background-color: #CAF7E2;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  color: white;
+}
+
+p {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.todolist {
+  margin: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+}
+
+.list-item {
+  display: flex;
+  width: 30em;
+  align-items: center;
+  padding:10px 5px 10px 20px;
+  border-top: 2px solid #58B09C;
+}
+
+.list-item:hover {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0) 30%);
+}
+
+.list-date {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.list-name {
+  margin-left: 3em;
+  width: 75%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.expiry-display {
+  color: red;
+  font-size: 70%;
+}
+
+.list-checkbox {
+  display: block;
+  position: relative;
+  transform: translateY(-12px);
+  cursor: pointer;
+}
+
+.list-checkbox input {
+  display: none;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height:1.4em;
+  width: 1.4em;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.list-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.add-window, .edit-window {
+  background-color: #88ebbd;
+  width: 30em;
+  height: 10em;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.input-flex, .edit-input-flex {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  align-items: center;
+}
+
+.todo-input, .edit-todo-input {
+  width: 17.6em;
+  overflow: hidden;
+  resize: none;
+}
+
+.input-date, .edit-input-date {
+  width: 7em;
+}
+
+.todo-input:focus, .input-date:focus {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+} 
+
+.todo-input, .input-date, .edit-todo-input, .edit-input-date {
+  background-color: transparent;
+  padding: 7.5px 10px;
+  font-size: 16px;
+  font-family: Arial;
+  border: 2px solid #56a781;
+  outline: none;
+}
+
+.add-button, .edit-save-button {
+  background-color: green;
+  width: 6em;
+}
+
+.cancel-button, .edit-cancel-button {
+  background-color: rgb(239, 22, 22);
+  width: 6em;
+}
+
+.add-button, .edit-save-button, .cancel-button, .edit-cancel-button {
+  padding: 10px 20px;
+}
+
+.add-button:hover, .edit-save-button:hover, .cancel-button:hover, .edit-cancel-button:hover {
+  transform: scale(1.03);
+}
+
+.add-button:active, .edit-save-button:active, .cancel-button:active, .edit-cancel-button:active {
+  transform: scale(1);
+}
+
+.delete-button {
+  position: relative;
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+.delete-button:hover {
+  animation: hover-ani 0.5s;
+}
+
+@keyframes hover-ani {
+  0% {transform: translateY(0);}
+  50% {transform: translateY(-4px);}
+  100% {transform: translateY(0);}
+}
+
+.delete-button svg {
+  height: 1.6em;
+  width: 1.6em;
+}
+
+.edit-button {
+  background-color: transparent;
+}
+
+.edit-button:hover {
+  animation: hover-ani 0.5s;
+}
+
+.edit-button img {
+  height: 1.6em;
+  width: 1.6em;
+}
+
+.add-nav {
+  margin: 10px;
+  color: white;
+  width: 10em;
+  height: 3em;
+  font-size: 15px;
+  background-color: #3626A7;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.add-nav:hover {
+  transform: scale(1.01);
+  opacity: 0.8;
+}
+
+.add-nav:active {
+  transform: scale(1.03);
+  opacity: 0.5;
+}

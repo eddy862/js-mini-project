@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="author"  content="Eddy">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="todolist.css">
+    <link rel="icon" href="todolist.sources/icon.png">
+  </head>
+  <body>
+    <button class="add-nav" for="add">Add To do list</button>
+
+    <div class="todolist"></div>
+
+    <div class="add-window js-add-window">
+      <div class="input-flex">
+
+        <textarea class="todo-input" type="text" placeholder="Write down your tasks"></textarea>
+
+        <div>
+          <input class="input-date" type="date">
+          <button class="add-button">Add</button>
+          <button class="cancel-button">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="edit-window js-edit-window">
+      <div class="edit-input-flex">
+
+        <textarea class="edit-todo-input" type="text" placeholder="Edit your tasks"></textarea>
+
+        <div>
+          <input class="edit-input-date" type="date">
+          <button class="edit-save-button">Save</button>
+          <button class="edit-cancel-button">Cancel</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="todolist.js"></script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="author"  content="Eddy">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="tic-tao-toe.css">
+    <link rel="icon" href="assets/icon.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Teko:wght@700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <main>
+      <h1>Tic-Tac-Toe</h1>
+      <div class="grid-container">
+        <div class="js-box box left top">
+          <img class="js-box-img">
+        </div>
+
+        <div class="js-box box top">
+          <img class="js-box-img">
+        </div>
+
+        <div class="js-box box right top">
+          <img class="js-box-img">
+        </div>
+
+        <div class="js-box box left">
+          <img class="js-box-img">
+        </div>
+
+        <div class="js-box box">
+          <img class="js-box-img">
+        </div> 
+
+        <div class="js-box box right">
+          <img class="js-box-img">
+        </div>
+
+        <div class="js-box box left bottom">
+          <img class="js-box-img">
+        </div>
+
+        <div class="js-box box bottom">
+          <img class="js-box-img">
+        </div>
+
+        <div class="js-box box right bottom">
+          <img class="js-box-img">
+        </div>
+      </div>
+      <div class="score-display">
+        <div>
+          <div>Player1 (X)</div>
+          <div class="p1-score js-p1-score">0</div>
+        </div>
+        <div>
+          <div>Tie</div>
+          <div class="tie-score js-tie-score">0</div>
+        </div>
+        <div>
+          <div>Player2 (O)</div>
+          <div class="p2-score js-p2-score">0</div>
+        </div>
+      </div>
+      <div class="js-player-move-result player-move-result">
+        <button class="js-start-button">Start</button>
+      </div>
+    </main>
+    <script src="tic-tac-toe.js"></script>
+  </body>
+</html>

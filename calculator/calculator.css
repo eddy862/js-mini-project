@@ -1,0 +1,117 @@
+body {
+  display: flex;
+  justify-content: center;
+  font-family: Arial;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  padding: 20px 18px 20px 18px;
+  border-radius: 15px;
+  box-shadow: 0 6px 9px rgba(0, 0, 0, 0.12), 
+  0 12px 15px rgba(0, 0, 0, 0.3)
+}
+
+.keypad {
+  display: grid;
+  grid-template-rows: 60px 60px 60px 60px 60px;
+  row-gap: 10px;
+}
+
+.display-area, .input-row, .result-row {
+  width: 263px;
+}
+
+.display-area {
+  height: 60px;
+  margin-bottom: 20px;
+  background-color: rgb(45, 44, 44);
+  padding: 10px;
+}
+
+.input-row, .result-row {
+  color: white;
+  text-align: right;
+}
+
+.input-row {
+  font-size: 25px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.result-row {
+  height: 40px;
+  font-size: 40px;
+  cursor: text;
+}
+
+.button1, .button2 {
+  width: 60px;
+  height: 60px;
+  font-size: 26px;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.button1:hover, .button2:hover {
+  opacity: 0.7;
+}
+
+.button1:active, .button2:active {
+  filter: brightness(1.5);
+}
+
+.button1 {
+  background-color: rgb(51, 51, 51);
+  margin-right: 5px;
+}
+
+.button2 {
+  background-color: rgb(254, 160, 10);
+}
+
+.clear-button, .backspace-button, .sound-button {
+  position: relative;
+}
+
+.clear-button {
+  font-size: 25px;
+  transform: translateY(-3px);
+}
+
+.backspace-button {
+  transform: translateY(-7px);
+}
+
+.material-icons, .sound-icon {
+  position: absolute;
+}
+
+.material-icons {
+  right: 19px;
+  top:17px;
+}
+
+.sound-button {
+  transform: translateY(-5px);
+}
+
+.sound-icon {
+  width: 32px;
+  top: 13px;
+  right: 14px;
+}
+
+.sound-icon.unmuted {
+  width: 28px;
+  top: 17px;
+  right: 15px;
+}

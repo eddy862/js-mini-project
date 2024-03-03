@@ -1,0 +1,95 @@
+body {
+  background-color: rgb(25, 25, 25);
+  color: white;
+  font-family: Arial;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.first-row {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  margin-bottom: 50px;
+}
+
+.result-and-move {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.move-container {
+  display: flex;
+  gap: 15px;
+}
+
+.com-move {
+  opacity: 0;;
+}
+
+.move-icon {
+  width: 50px;
+}
+
+.move-button {
+  background-color: transparent;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid white;
+  transition: 0.15s;
+}
+
+.move-button:active {
+  background-color: rgb(52, 52, 52);
+}
+
+.first-row:hover .move-button:not(:hover) {
+  opacity: 0.5;
+}
+
+.result {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.score {
+  margin-top: 55px;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 5px;
+}
+
+.reset-button, .autoplay-button {
+  border: none;
+  padding: 10px 15px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.15s;
+  border-radius: 5px;
+}
+
+.reset-button:hover, .autoplay-button:hover {
+  opacity: 0.8;
+}
+
+.reset-button:active, .autoplay-button:active {
+  opacity: 0.5;
+}
+

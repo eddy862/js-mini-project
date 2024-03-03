@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  font-family: Arial;
+}
+
+body, main, .box, 
+.player-move-result, .score-display, .button-flex,
+.score-display div {
+  display: flex;
+}
+
+body, .box {
+  justify-content: center;
+}
+
+main, .box, .player-move-result,
+.score-display div {
+  align-items: center;
+}
+
+body {
+  background-color: #337CCF;
+}
+
+main {
+  width: 50%;
+  flex-direction: column;
+}
+
+h1 {
+  color: #FFC436;
+  font-size: 60px;
+  font-family: 'Teko', sans-serif
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+}
+
+.box.left {
+  border-right-style: solid;
+}
+
+.box.right {
+  border-left-style: solid;
+}
+
+.box.top {
+  border-bottom-style: solid;
+}
+
+.box.bottom {
+  border-top-style: solid;
+}
+
+.box {
+  border-color: white;
+  border-width: 5px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.box img {
+  height: 70px;
+}
+
+.box img.active {
+  animation: img-amplify 0.6s;
+}
+
+.box img.win {
+  animation: win-ani 0.5s infinite alternate;
+}
+
+@keyframes img-amplify {
+  0% {transform: scale(0.5);}
+  50% {transform: scale(1.2);}
+  100% {transform: scale(1);}
+}
+
+@keyframes win-ani {
+  0% {transform: scale(0.5);}
+  50% {transform: scale(1.2);}
+  100% {transform: scale(1);}
+}
+
+
+.player-move-result {
+  flex-direction: column;
+  gap: 10px;
+  font-size: 35px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.player-move-result button{
+  padding: 15px 20px 15px 20px;
+  font-size: 25px;
+  border: none;
+  color: white;
+  background-color: #191D88;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+
+.player-move-result button:hover {
+  opacity: 0.8;
+}
+
+.player-move-result button:active {
+  opacity: 0.5;
+}
+
+.score-display {
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 20px;
+  gap: 40px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.score-display div {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.button-flex {
+  margin-top: 5px;
+  gap: 10px;
+}
+
+.p1-score.score-ani,
+.p2-score.score-ani,
+.tie-score.score-ani
+ {
+  animation: img-amplify 0.6s;
+}
+
